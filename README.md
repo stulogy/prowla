@@ -4,7 +4,7 @@ An agentic job hunting assistant. Track applications, research companies, and ge
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![ProwlA Dashboard](docs/assets/screenshot-dashboard.png)
+![ProwlA Dashboard](docs/assets/prowla-desktop.png)
 
 ## Why ProwlA?
 
