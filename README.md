@@ -54,7 +54,7 @@ ProwlA works in three modes depending on your needs:
 ### 🖱️ Manual Mode
 Just use the web UI. Add jobs manually, update statuses, take notes. No AI required.
 
-**Best for:** People who want a clean job tracker without automation.
+**Best for:** People who want a clean ProwlA without automation.
 
 ### ⚡ MCP Assisted Mode
 Connect ProwlA to Cursor or Claude Desktop via MCP. Ask the AI to research companies, generate materials, or find new opportunities.

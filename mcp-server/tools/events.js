@@ -1,7 +1,7 @@
 /**
  * Events Tools
  * 
- * MCP tools for subscribing to and receiving events from the job tracker.
+ * MCP tools for subscribing to and receiving events from the ProwlA.
  * Supports both polling and webhook delivery modes.
  * 
  * Event Types:

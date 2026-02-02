@@ -18,7 +18,7 @@ export default function Sidebar({ activeView, onViewChange, onSearchJobs, search
           <div className="logo-icon">
             <Zap size={18} strokeWidth={2.5} />
           </div>
-          <span className="logo-text">JobTracker</span>
+          <span className="logo-text">ProwlA</span>
         </div>
       </div>
 

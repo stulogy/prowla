@@ -5,7 +5,7 @@ Use ProwlA as a standalone job tracking application without any AI features.
 ## Overview
 
 Manual mode is perfect if you:
-- Want a clean, focused job tracker
+- Want a clean, focused ProwlA
 - Don't have an Anthropic API key
 - Prefer to do your own research
 - Just want to organize your job search

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Job Tracker MCP Server
+ * ProwlA MCP Server
  * 
  * An MCP (Model Context Protocol) server that provides AI agents with
  * tools to manage job applications, research, and materials.
@@ -41,15 +41,15 @@
  * MCP Configuration (add to your MCP settings):
  * {
  *   "mcpServers": {
- *     "job-tracker": {
+ *     "prowla": {
  *       "command": "node",
- *       "args": ["/path/to/job-tracker/mcp-server/index.js"]
+ *       "args": ["/path/to/prowla/mcp-server/index.js"]
  *     }
  *   }
  * }
  * 
  * @module mcp-server
- * @author Job Tracker Team
+ * @author ProwlA Team
  * @version 1.0.0
  */
 
@@ -77,7 +77,7 @@ import { closeDb } from './lib/db.js';
  * Server metadata
  */
 const SERVER_INFO = {
-  name: 'job-tracker-mcp',
+  name: 'prowla-mcp',
   version: '1.0.0',
   description: 'MCP server for managing job applications, research, and materials'
 };
@@ -196,7 +196,7 @@ function createServer() {
  */
 function printHelp() {
   console.log(`
-Job Tracker MCP Server v${SERVER_INFO.version}
+ProwlA MCP Server v${SERVER_INFO.version}
 
 An MCP server providing AI agents with tools to manage job applications.
 
@@ -263,7 +263,7 @@ MCP CONFIGURATION:
   
   {
     "mcpServers": {
-      "job-tracker": {
+      "prowla": {
         "command": "node",
         "args": ["${process.cwd()}/index.js"]
       }

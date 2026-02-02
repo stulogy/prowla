@@ -649,5 +649,5 @@ app.post('/api/reload', (req, res) => {
 
 const PORT = 3001;
 app.listen(PORT, () => {
-  console.log(`🚀 Job Tracker API running on http://localhost:${PORT}`);
+  console.log(`🚀 ProwlA API running on http://localhost:${PORT}`);
 });

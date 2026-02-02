@@ -2,7 +2,7 @@
  * Database Connection Layer
  * 
  * Provides a shared SQLite database connection for the MCP server.
- * Connects to the same database as the job tracker Express server.
+ * Connects to the same database as the ProwlA Express server.
  * 
  * @module lib/db
  */
