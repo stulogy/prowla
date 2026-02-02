@@ -1,0 +1,75 @@
+{
+  "description": "Priority scoring configuration. Jobs are scored 0-100 based on these weights.",
+  
+  "weights": {
+    "roleMatch": 25,
+    "compensationMatch": 20,
+    "industryMatch": 15,
+    "companyStageMatch": 15,
+    "remoteMatch": 10,
+    "workTypeMatch": 10,
+    "recencyBonus": 5
+  },
+  
+  "thresholds": {
+    "highPriority": 85,
+    "mediumPriority": 60,
+    "lowPriority": 0
+  },
+  
+  "priorityLabels": {
+    "high": "🔴 High",
+    "medium": "🟡 Medium",
+    "low": "🟢 Lower"
+  },
+  
+  "bonuses": {
+    "recentFunding": 10,
+    "referral": 15,
+    "directApplication": 5,
+    "knownContact": 20
+  },
+  
+  "penalties": {
+    "noSalaryListed": -5,
+    "vaguejobDescription": -10,
+    "tooManyRequirements": -5
+  },
+  
+  "roleMatchRules": [
+    {
+      "pattern": "exact",
+      "description": "Exact match with target role",
+      "score": 25
+    },
+    {
+      "pattern": "contains",
+      "description": "Contains target role keywords",
+      "score": 20
+    },
+    {
+      "pattern": "related",
+      "description": "Related role (e.g., UX for Product Designer)",
+      "score": 15
+    }
+  ],
+  
+  "compensationMatchRules": {
+    "aboveRange": {
+      "description": "Compensation above your range",
+      "score": 20
+    },
+    "withinRange": {
+      "description": "Compensation within your range",
+      "score": 15
+    },
+    "belowRange": {
+      "description": "Compensation below your range",
+      "score": 5
+    },
+    "notListed": {
+      "description": "Compensation not listed",
+      "score": 10
+    }
+  }
+}

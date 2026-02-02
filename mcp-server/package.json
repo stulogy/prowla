@@ -1,0 +1,27 @@
+{
+  "name": "prowla-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for AI agents to manage job applications, research, and materials",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "list": "node index.js --list",
+    "help": "node index.js --help"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "better-sqlite3": "^11.0.0",
+    "fuse.js": "^7.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "prowla",
+    "job-tracker",
+    "ai-agent",
+    "model-context-protocol"
+  ],
+  "author": "Stu Green (https://ailogy.co)",
+  "license": "MIT"
+}

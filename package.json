@@ -1,0 +1,32 @@
+{
+  "name": "prowla",
+  "version": "1.0.0",
+  "description": "An agentic job hunting assistant with MCP integration",
+  "author": "Stu Green (https://ailogy.co)",
+  "license": "MIT",
+  "scripts": {
+    "server": "cd server && node index.js",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "setup": "npm install && cd server && npm install && cd ../client && npm install && cd ../mcp-server && npm install",
+    "build": "cd client && npm run build",
+    "start": "cd server && node index.js"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/prowla.git"
+  },
+  "keywords": [
+    "job-tracker",
+    "job-hunting",
+    "ai-agent",
+    "mcp",
+    "automation"
+  ]
+}

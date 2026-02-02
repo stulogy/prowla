@@ -1,0 +1,94 @@
+{
+  "targetRoles": [
+    "Product Designer",
+    "Senior Product Designer",
+    "UX Designer",
+    "Design Lead"
+  ],
+  
+  "keywords": [
+    "product design",
+    "ux design",
+    "user experience",
+    "design systems"
+  ],
+  
+  "excludeKeywords": [
+    "junior",
+    "intern",
+    "entry level"
+  ],
+  
+  "workTypes": [
+    "Full-time",
+    "Contract",
+    "Fractional",
+    "Part-time"
+  ],
+  
+  "remote": {
+    "required": true,
+    "preferredTimezones": ["US/Pacific", "US/Eastern", "UTC"]
+  },
+  
+  "compensation": {
+    "salary": {
+      "min": 120000,
+      "max": 200000,
+      "currency": "USD"
+    },
+    "hourly": {
+      "min": 75,
+      "max": 150,
+      "currency": "USD"
+    },
+    "fractionalMonthly": {
+      "min": 4000,
+      "max": 10000,
+      "currency": "USD"
+    }
+  },
+  
+  "hoursPerWeek": {
+    "min": 10,
+    "max": 40
+  },
+  
+  "industries": {
+    "preferred": ["SaaS", "FinTech", "EdTech", "HealthTech", "AI/ML"],
+    "excluded": ["Gambling", "Tobacco", "Weapons"]
+  },
+  
+  "companyStage": {
+    "preferred": ["Seed", "Series A", "Series B"],
+    "excluded": []
+  },
+  
+  "companySize": {
+    "min": 5,
+    "max": 500
+  },
+  
+  "sources": [
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/jobs",
+      "enabled": true
+    },
+    {
+      "name": "YC Jobs",
+      "url": "https://ycombinator.com/jobs",
+      "enabled": true
+    },
+    {
+      "name": "AngelList",
+      "url": "https://wellfound.com",
+      "enabled": true
+    }
+  ],
+  
+  "autoResearch": {
+    "enabled": false,
+    "minPriorityScore": 85
+  }
+}
