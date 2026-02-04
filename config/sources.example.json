@@ -1,0 +1,81 @@
+{
+  "description": "Configure your job board sources here. Copy to sources.json and customize.",
+  
+  "sources": [
+    {
+      "id": "weworkremotely",
+      "name": "WeWorkRemotely",
+      "enabled": true,
+      "type": "rss",
+      "priority": "high",
+      "rssFeeds": [
+        "https://weworkremotely.com/categories/remote-design-jobs.rss",
+        "https://weworkremotely.com/categories/remote-product-jobs.rss"
+      ],
+      "searchTerms": ["product designer", "ux designer"],
+      "filters": {
+        "categories": ["design", "product"]
+      },
+      "notes": "Public RSS feeds, no authentication required"
+    },
+    {
+      "id": "ycombinator",
+      "name": "YC Work at a Startup",
+      "enabled": true,
+      "type": "browser",
+      "priority": "high",
+      "urls": [
+        "https://www.workatastartup.com/jobs?role=design",
+        "https://www.workatastartup.com/jobs?role=product"
+      ],
+      "notes": "Requires browser automation (JavaScript rendering). Ask your AI agent to scan."
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "enabled": false,
+      "type": "browser",
+      "priority": "medium",
+      "urls": [
+        "https://www.linkedin.com/jobs/search/?keywords=product%20designer&f_WT=2"
+      ],
+      "notes": "Requires login and browser automation. Best used with authenticated AI agent."
+    },
+    {
+      "id": "wellfound",
+      "name": "Wellfound (AngelList)",
+      "enabled": false,
+      "type": "browser",
+      "priority": "medium",
+      "urls": [
+        "https://wellfound.com/role/l/product-designer/united-states"
+      ],
+      "notes": "Requires browser automation for full listings"
+    },
+    {
+      "id": "custom_rss",
+      "name": "Custom RSS Feed",
+      "enabled": false,
+      "type": "rss",
+      "priority": "medium",
+      "rssFeeds": [
+        "https://example.com/jobs.rss"
+      ],
+      "notes": "Add your own RSS feed URLs here"
+    }
+  ],
+  
+  "scanning": {
+    "autoScanEnabled": false,
+    "scanIntervalHours": 8,
+    "maxJobsPerSource": 30,
+    "daysToConsider": 30,
+    "autoAddToDatabase": true,
+    "requiresApproval": false
+  },
+  
+  "scoring": {
+    "minScoreToAdd": 40,
+    "autoResearchMinScore": 80
+  }
+}

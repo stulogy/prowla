@@ -146,7 +146,8 @@ prowla/
 ├── client/          # React UI (Vite)
 ├── server/          # Express API + SQLite
 ├── mcp-server/      # MCP tools for AI agents
-├── config/          # User configuration
+├── config/          # User configuration (profile, search, sources)
+├── scripts/         # Job scanning scripts (user-configurable)
 ├── tasks/           # Task queue (for async processing)
 └── docs/            # Documentation
 ```
@@ -164,6 +165,7 @@ prowla/
 |----------|-------------|
 | [INSTALLATION.md](docs/INSTALLATION.md) | Detailed setup guide |
 | [CONFIGURATION.md](docs/CONFIGURATION.md) | All configuration options |
+| [JOB-SOURCES.md](docs/JOB-SOURCES.md) | Configure job board sources |
 | [modes/MANUAL-MODE.md](docs/modes/MANUAL-MODE.md) | Using without AI |
 | [modes/MCP-MODE.md](docs/modes/MCP-MODE.md) | Cursor/Claude Desktop integration |
 | [modes/AUTONOMOUS-MODE.md](docs/modes/AUTONOMOUS-MODE.md) | OpenClaw setup |

@@ -611,17 +611,56 @@ app.post('/api/jobs/:id/request-materials', (req, res) => {
   res.json({ success: true, message: 'Materials generation task queued' });
 });
 
-// Trigger job search (placeholder - implement your own search logic or use agents)
+// Trigger job search - runs the scan-jobs.js script
 app.post('/api/search', async (req, res) => {
-  // In the open source version, job search is handled by:
-  // 1. Manual entry via the UI
-  // 2. MCP tools called by AI agents
-  // 3. Custom scripts you create
-  
-  res.json({ 
-    success: true, 
-    message: 'Job search triggered. Use MCP tools or add jobs manually.' 
-  });
+  try {
+    console.log('🔍 Starting job scan...');
+    
+    const { spawn } = await import('child_process');
+    const searchPath = join(__dirname, '../scripts/scan-jobs.js');
+    
+    // Check if script exists
+    if (!fs.existsSync(searchPath)) {
+      return res.json({ 
+        success: false, 
+        message: 'Scan script not found. Run: cd scripts && npm install' 
+      });
+    }
+    
+    // Run the scan script
+    const child = spawn('node', [searchPath], {
+      cwd: join(__dirname, '../scripts'),
+      stdio: 'pipe'
+    });
+    
+    let output = '';
+    child.stdout.on('data', (data) => {
+      output += data.toString();
+      console.log(data.toString());
+    });
+    
+    child.stderr.on('data', (data) => {
+      console.error(data.toString());
+    });
+    
+    child.on('close', (code) => {
+      if (code === 0) {
+        console.log('✅ Job scan complete');
+      } else {
+        console.error(`❌ Scan failed with code ${code}`);
+      }
+    });
+    
+    // Respond immediately - scan runs in background
+    res.json({ 
+      success: true, 
+      message: 'Job scan started. Check console for progress.' 
+    });
+    
+  } catch (error) {
+    console.error('Search error:', error);
+    res.status(500).json({ error: error.message });
+  }
 });
 
 // Refresh data (re-detect materials, etc.)

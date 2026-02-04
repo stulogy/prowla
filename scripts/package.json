@@ -1,0 +1,14 @@
+{
+  "name": "prowla-scripts",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Job scanning scripts for ProwlA",
+  "scripts": {
+    "scan": "node scan-jobs.js",
+    "scan:test": "node scan-jobs.js --test",
+    "list-sources": "node scan-jobs.js --list"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
